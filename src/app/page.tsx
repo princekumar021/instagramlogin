@@ -94,7 +94,7 @@ export default function Home() {
 
             <Button variant="link" className="w-full text-sm font-semibold text-primary hover:no-underline">
               <Facebook className="mr-2 h-5 w-5 fill-current" />
-              Continue as Dave Johnson
+              Continue as Facebook
             </Button>
              {state?.message && !state.success && (
                 <p className="pt-2 text-center text-sm text-destructive">{state.message}</p>
