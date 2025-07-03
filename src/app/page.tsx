@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useActionState } from "react";
 import Image from "next/image";
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 import { Eye, EyeOff, Facebook, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,7 +25,7 @@ function LoginButton() {
 }
 
 export default function Home() {
-  const [state, formAction] = useFormState(handleLogin, initialState);
+  const [state, formAction] = useActionState(handleLogin, initialState);
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
